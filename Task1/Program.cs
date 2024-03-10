@@ -42,7 +42,7 @@ for (int subjectNumber = 1; subjectNumber < numberOfSubjects + 1; subjectNumber+
     double subjectGrade = Convert.ToDouble(Console.ReadLine());
 
     while (subjectGrade < 0 || subjectGrade  > 100){
-        Console.WriteLine("Invalid Grade!! Your subject Grade has to be in range 0-100, Enter a valid Grade");
+        Console.WriteLine("Invalid Grade!! Your subject Grade has to be in range 0-100, Enter a valid Grade.");
         subjectGrade = Convert.ToDouble(Console.ReadLine());
     }
 
