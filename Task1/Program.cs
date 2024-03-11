@@ -1,5 +1,4 @@
-﻿
-// Get student name
+﻿// Get student name
 Console.WriteLine("Enter your name: ");
 string studentName = Console.ReadLine();
 
