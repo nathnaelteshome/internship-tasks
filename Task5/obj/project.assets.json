@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day_3_task_2\\day_3_task_2.csproj",
+      "projectUniqueName": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task5\\day_3_task_2.csproj",
       "projectName": "day_3_task_2",
-      "projectPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day_3_task_2\\day_3_task_2.csproj",
+      "projectPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task5\\day_3_task_2.csproj",
       "packagesPath": "C:\\Users\\natyb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day_3_task_2\\obj\\",
+      "outputPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\natyb\\AppData\\Roaming\\NuGet\\NuGet.Config"

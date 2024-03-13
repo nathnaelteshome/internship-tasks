@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day3_task_1\\day3_task_1.csproj": {}
+    "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task4\\day3_task_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day3_task_1\\day3_task_1.csproj": {
+    "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task4\\day3_task_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day3_task_1\\day3_task_1.csproj",
+        "projectUniqueName": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task4\\day3_task_1.csproj",
         "projectName": "day3_task_1",
-        "projectPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day3_task_1\\day3_task_1.csproj",
+        "projectPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task4\\day3_task_1.csproj",
         "packagesPath": "C:\\Users\\natyb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\day3_task_1\\obj\\",
+        "outputPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\natyb\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
