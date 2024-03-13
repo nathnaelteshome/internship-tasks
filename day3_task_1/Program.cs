@@ -1,6 +1,15 @@
-﻿public class Shape
+﻿Circle circle = new Circle { Name = "Ellipse", Radius = 2 };
+Rectangle rectangle = new Rectangle { Name = "Square", Width = 2, Height = 3 };
+Triangle triangle = new Triangle { Name = "Iso-Triangle", Base = 2, Height = 3 };
+
+Console.Write($"I am {circle.Name} and my  area is {circle.CalculateArea()}\n");
+Console.Write($"I am {rectangle.Name} and my  area is {rectangle.CalculateArea()}\n");
+Console.Write($"I am {triangle.Name} and my  area is {triangle.CalculateArea()}");
+
+
+public class Shape
 {
-    public string Name ;
+    public string Name;
 
     public virtual double CalculateArea()
     {
@@ -40,16 +49,3 @@ public class Triangle : Shape
     }
 }
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        Circle circle = new Circle { Name = "Ellipse", Radius = 2 };
-        Rectangle rectangle = new Rectangle { Name = "Square", Width = 2, Height = 3 };
-        Triangle triangle = new Triangle { Name = "Iso-Triangle", Base = 2, Height = 3 };
-
-        Console.Write($"I am {circle.Name} and my  area is {circle.CalculateArea()}\n");
-        Console.Write($"I am {rectangle.Name} and my  area is {rectangle.CalculateArea()}\n");
-        Console.Write($"I am {triangle.Name} and my  area is {triangle.CalculateArea()}");
-    }
-}
