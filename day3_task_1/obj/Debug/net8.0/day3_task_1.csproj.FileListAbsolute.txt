@@ -1,0 +1,15 @@
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\bin\Debug\net8.0\day3_task_1.exe
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\bin\Debug\net8.0\day3_task_1.deps.json
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\bin\Debug\net8.0\day3_task_1.runtimeconfig.json
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\bin\Debug\net8.0\day3_task_1.dll
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\bin\Debug\net8.0\day3_task_1.pdb
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.AssemblyInfoInputs.cache
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.AssemblyInfo.cs
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.csproj.CoreCompileInputs.cache
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.sourcelink.json
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.dll
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\refint\day3_task_1.dll
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.pdb
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\day3_task_1.genruntimeconfig.cache
+C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\day3_task_1\obj\Debug\net8.0\ref\day3_task_1.dll
