@@ -1,30 +1,22 @@
-﻿Rectangle rectangle = new Rectangle (name: "Square", width: 2, height: 3 );
+﻿
+Rectangle rectangle = new Rectangle (name: "Square", width: 2, height: 3 );
 Circle circle = new Circle ( name: "Ellipse",  radius: 2 );
-Triangle triangle = new Triangle ( name: "Iso-Triangle", baseWidth: 2, height: 3 );
+Triangle triangle = new Triangle ( name: "Iso-Triangle", baseHeight: 2, height: 3 );
 
 Console.Write($"I am {circle.Name} and my  area is {circle.CalculateArea()}\n");
 Console.Write($"I am {rectangle.Name} and my  area is {rectangle.CalculateArea()}\n");
 Console.Write($"I am {triangle.Name} and my  area is {triangle.CalculateArea()}");
 
-
-public class Shape
+public abstract class Shape(string name)
 {
-    public string Name{ get; set;}
+    public string Name {get; set;} = name;
 
-    public virtual double CalculateArea()
-    {
-        return 0; 
-    }
+    public abstract double CalculateArea();
 }
 
-public class Circle: Shape
+public class Circle(double radius, string name): Shape(name)
 {
-    public double Radius;
-
-    public Circle(string name, double radius){
-        Name = name;
-        Radius = radius;
-    }
+    public double Radius {get; set;} = radius;
 
     public override double CalculateArea()
     {
@@ -32,15 +24,10 @@ public class Circle: Shape
     }
 }
 
-public class Rectangle: Shape
+public class Rectangle(string name, double width, double height): Shape(name)
 {
-    public double Width;
-    public double Height;
-    public Rectangle(string name, double height, double width){
-        Name = name;
-        Height = height;
-        Width = width;
-    }
+    public double Width {get; set;} = width;
+    public double Height {get; set; } = height;
 
     public override double CalculateArea()
     {
@@ -48,16 +35,10 @@ public class Rectangle: Shape
     }
 }
 
-public class Triangle : Shape
+public class Triangle(string name, double baseHeight, double height) : Shape(name)
 {
-    public double Base;
-    public double Height;
-
-    public Triangle(string name, double height, double baseWidth){
-        Name = name;
-        Height = height;
-        Base = baseWidth;
-    }
+    public double Base {get; set;} = baseHeight;
+    public double Height {get; set;} = height;
 
     public override double CalculateArea()
     {
@@ -68,7 +49,7 @@ public class Triangle : Shape
 
 
 
-// Previous Code
+// Previous Code with out constructors and properties exposed to public
 
 
 // Circle circle = new Circle { Name = "Ellipse", Radius = 2 };
@@ -80,14 +61,12 @@ public class Triangle : Shape
 // Console.Write($"I am {triangle.Name} and my  area is {triangle.CalculateArea()}");
 
 
-// public class Shape
+// public abstract class Shape
 // {
 //     public string Name;
 
-//     public virtual double CalculateArea()
-//     {
-//         return 0; 
-//     }
+//     public abstract double CalculateArea();
+//     
 // }
 
 // public class Circle: Shape
