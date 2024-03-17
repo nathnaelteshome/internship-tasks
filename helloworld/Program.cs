@@ -1,9 +1,22 @@
-﻿Author mahesh = new Author(name = "najdj");
-public class Author(string name)
+﻿class MyException : Exception
 {
-    public string Name { get; set; } = name;
-    public string Book { get; set; }
-    public string Publisher { get; set; }
-    public Int16 Year { get; set; }
-    public double Price { get; set; }
+    public MyException(string str)
+    {
+        Console.WriteLine("User defined exception");
+    }
+}
+class MyClient
+{
+    public static void Main()
+    {
+        try
+        {
+            throw new MyException("RAJESH");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception caught here" + e.ToString());
+        }
+        Console.WriteLine("LAST STATEMENT");
+    }
 }

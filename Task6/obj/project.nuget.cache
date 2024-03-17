@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hEyahtTGOEO6Gv/DmZeWTXswHfEMyqqScZ1AepmxcIWVF2EeFDy2p2RGG8f9sRE+DbHL8a51z9nw3I1n8+mnAA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\task6\\task6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\natyb\\.nuget\\packages\\csvhelper\\31.0.2\\csvhelper.31.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
