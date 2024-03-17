@@ -87,27 +87,19 @@ public class Task
     public bool IsComplete { get; set; }
 }
 
-/// <summary>
-/// Task manager class with adding, listing, filtering, and updating functionality.
-/// </summary>
+// Task manager class with adding, listing, filtering, and updating functionality.
 public class TaskManager
 {
     private List<Task> tasks = new List<Task>();
     private List<Task> FilteredTasks = new List<Task>();
 
-    /// <summary>
-    /// Adds a task to the task manager.
-    /// </summary>
-    /// <param name="task">The task to be added.</param>
+    // Adds a task to the task manager.
     public void AddTask(Task task)
     {
         tasks.Add(task);
     }
 
-    /// <summary>
-    /// Lists all the tasks in the task manager.
-    /// </summary>
-    /// <returns>The list of tasks.</returns>
+    // Lists all the tasks in the task manager.
     public List<Task> ListTasks()
     {
         foreach (Task task in tasks)
@@ -118,10 +110,7 @@ public class TaskManager
         return tasks;
     }
 
-    /// <summary>
-    /// Filters the tasks based on the specified category.
-    /// </summary>
-    /// <param name="catagory">The category to filter the tasks by.</param>
+    // Filters the tasks based on the specified category.
     public void FilterTasks(TaskCatagory catagory)
     {
         FilteredTasks = tasks.Where(t => t.Catagory == catagory).ToList();
@@ -132,11 +121,7 @@ public class TaskManager
         }
     }
 
-    /// <summary>
-    /// Updates the completion status of a task.
-    /// </summary>
-    /// <param name="name">The name of the task to update.</param>
-    /// <param name="IsComplete">The new completion status of the task.</param>
+    // Updates the completion status of a task.
     public void updateTask(string name, bool IsComplete)
     {
         foreach (var task in tasks)
@@ -148,29 +133,6 @@ public class TaskManager
         }
     }
 
-    /// <summary>
-    /// Reads the list of tasks from a CSV file.
-    /// </summary>
-    /// <param name="filePath">The file path of the CSV file.</param>
-    public async void ReadTasks(string filePath)
-    {
-        try
-        {
-            using (var reader = new StreamReader(filePath))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                var records = csv.GetRecords<Task>().ToList();
-                Console.WriteLine(records);
-                // return the list of records read from the csv file
-
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-
-        }
-    }
 
 }
 
