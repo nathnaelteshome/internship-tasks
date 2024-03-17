@@ -18,7 +18,7 @@ var csvPath = Path.Combine(Environment.CurrentDirectory, "tasks.csv");
 StoreTasks(csvPath, manager1.ListTasks());
 ReadTasks(csvPath);
 
-/// Stores the list of tasks in a CSV file.
+// Stores the list of tasks in a CSV file.
 static void StoreTasks(string filePath, List<Task> tasks)
 {
     try
@@ -47,7 +47,7 @@ static void StoreTasks(string filePath, List<Task> tasks)
 }
 
 
-/// Reads the list of tasks from a CSV file.
+// Reads the list of tasks from a CSV file.
 static void ReadTasks(string filePath)
 {
     try
