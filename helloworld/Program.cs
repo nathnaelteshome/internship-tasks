@@ -1,22 +1,15 @@
-﻿class MyException : Exception
+﻿MyClass.Print();
+
+public class MyClass
 {
-    public MyException(string str)
+    static MyClass()
     {
-        Console.WriteLine("User defined exception");
+        Console.WriteLine("Static Constructor");
+    }
+
+    public static void Print()
+    {
+        Console.WriteLine("Print Method");
     }
 }
-class MyClient
-{
-    public static void Main()
-    {
-        try
-        {
-            throw new MyException("RAJESH");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Exception caught here" + e.ToString());
-        }
-        Console.WriteLine("LAST STATEMENT");
-    }
-}
+
