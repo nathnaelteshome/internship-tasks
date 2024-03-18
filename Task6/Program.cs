@@ -10,7 +10,7 @@ manager1.AddTask(new Task { Name = "Get Groccery", Description = "Description 3"
 
 manager1.ListTasks();
 manager1.FilterTasks(TaskCatagory.Personal);
-manager1.updateTask("Task 1", true);
+manager1.updateTask("Clean Room", true);
 manager1.ListTasks();
 
 // create a filepath  and store in csv file
@@ -82,6 +82,7 @@ public enum TaskCatagory
 public class Task
 
 {
+
     public string Name { get; set; }
     public string Description { get; set; }
     public TaskCatagory Catagory { get; set; }
