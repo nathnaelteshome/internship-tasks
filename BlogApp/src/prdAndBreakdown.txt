@@ -1,0 +1,57 @@
+Here's a breakdown of what to put on the domain layer as entities and on the application layer as DTOs based on the provided PRD:
+
+Domain Layer (Entities):
+
+User:
+Properties: Id, Username, Email, Password (Hashed), Name, Bio, ProfilePicture, Role (enum: Admin/User), Timestamp
+Behavior: Enforce password complexity rules (if applicable)
+Blog:
+Properties: Id, UserId (foreign key), Title, Content, CreatedAt (auto-generated)
+Behavior: Validate title and content length
+BlogRating:
+Properties: Id, UserId (foreign key), BlogId (foreign key), Rating (int: 1-5)
+Behavior: Enforce rating within the specified range
+Tag:
+Properties: Id, Name
+Comment:
+Properties: Id, UserId (foreign key), BlogId (foreign key), Content, CreatedAt (auto-generated)
+Like:
+Properties: Id, UserId (foreign key), BlogId (foreign key) (composite primary key with User + Blog)
+Share:
+Properties: Id, UserId (foreign key), BlogId (foreign key) (composite primary key with User + Blog)
+Notification:
+Properties: Id, UserId (foreign key), Content, CreatedAt (auto-generated)
+Follower:
+Properties: Id (composite primary key with FollowerId + FollowedUserId), FollowerId (foreign key), FollowedUserId (foreign key)
+Application Layer (DTOs):
+
+UserRegistrationDto:
+Properties: Username, Email, Password (plain text)
+UserLoginDto:
+Properties: Username, Password (plain text)
+UserProfileDto:
+Properties: Id, Username, Email, Name, Bio, ProfilePicture
+BlogDto (for creating/updating):
+Properties: Title, Content
+BlogDto (for retrieving):
+Properties: Id, Title, Content, CreatedAt, Author (UserDto - lightweight containing only Id, Username)
+BlogRatingDto:
+Properties: Rating
+TagDto:
+Properties: Id, Name
+CommentDto (for creating):
+Properties: Content
+CommentDto (for retrieving):
+Properties: Id, Content, CreatedAt, Author (UserDto - lightweight containing only Id, Username)
+LikeDto: (might not be necessary as like/unlike can be handled with a boolean flag in another DTO)
+ShareDto: (might not be necessary as share can be handled with a dedicated API endpoint)
+NotificationDto:
+Properties: Id, Content, CreatedAt
+FollowerDto: (might not be necessary as follow/unfollow can be handled with a dedicated API endpoint)
+Notes:
+
+Domain entities represent the core concepts and business logic of the application.
+They should not contain any presentation or data transfer specific details.
+Application DTOs are used for transferring data between layers.
+They can be tailored to specific use cases (create, update, retrieve) and might exclude sensitive information like passwords.
+Some entities like Like and Share might not require separate DTOs if the actions are handled with booleans in other DTOs (e.g., BlogDto for liking/unliking).

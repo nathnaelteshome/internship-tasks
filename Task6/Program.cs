@@ -37,7 +37,7 @@ static void StoreTasks(string filePath, List<Task> tasks)
         using (CsvWriter csvWriter = new CsvWriter(writer, configTasks))
         {
             csvWriter.WriteRecords(tasks);
-            Console.WriteLine("Tasks have been stored in the file");
+            // Console.WriteLine("Tasks have been stored in the file");
         }
     }
     catch (Exception ex)
