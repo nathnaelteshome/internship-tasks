@@ -6,4 +6,4 @@ namespace Application.Persistance.Contracts
     {
         Task<List<Comment>> GetpostComments(int postId);
     }
-}
+} 

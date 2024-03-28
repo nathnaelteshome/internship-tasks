@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Application.Features.Comments.Handlers.Queries;
 
-public class GetCommentRequestHandler :  IRequestHandler<GetCommentRequest, ListCommentDto>
+public class GetCommentRequestHandler :  IRequestHandler<GetCommentRequest, CommentDto>
 {
     private readonly ICommentRepository _commentRepository;
     private readonly IMapper _mapper;
@@ -16,10 +16,10 @@ public class GetCommentRequestHandler :  IRequestHandler<GetCommentRequest, List
         _mapper = mapper;
 
     }
-    public async Task<ListCommentDto> Handle(GetCommentRequest request, CancellationToken cancellationToken)
+    public async Task<CommentDto> Handle(GetCommentRequest request, CancellationToken cancellationToken)
     {
          var comment = await _commentRepository.GetByIdAsync(request.Id);
         
-        return _mapper.Map<ListCommentDto>(comment);
+        return _mapper.Map<CommentDto>(comment);
     }
 }
