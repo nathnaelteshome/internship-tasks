@@ -22,62 +22,102 @@ namespace Task9.Controllers;
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Comment>>> GetComments()
     {
-      return await _context.Comments.ToListAsync();
+      try
+      {
+        return await _context.Comments.ToListAsync();
+      }
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
 
     // GET: api/comments/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Comment>> GetComment(int id)
     {
-      var comment = await _context.Comments.FindAsync(id);
-
-      if (comment == null)
+      try
       {
-        return NotFound();
-      }
+        var comment = await _context.Comments.FindAsync(id);
 
-      return comment;
+        if (comment == null)
+        {
+          return NotFound();
+        }
+
+        return comment;
+      }
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
 
     // POST api/comments
     [HttpPost]
     public async Task<ActionResult<Comment>> PostComment(Comment comment)
     {
-      _context.Comments.Add(comment);
-      await _context.SaveChangesAsync();
+      try
+      {
+        _context.Comments.Add(comment);
+        await _context.SaveChangesAsync();
 
-      return CreatedAtAction(nameof(GetComment), new { id = comment.CommentId }, comment);
+        return CreatedAtAction(nameof(GetComment), new { id = comment.CommentId }, comment);
+      }
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
 
     // PUT api/comments/5
     [HttpPut("{id}")]
     public async Task<IActionResult> PutComment(int id, Comment comment)
     {
-      if (id != comment.CommentId)
+      try
       {
-        return BadRequest();
+        if (id != comment.CommentId)
+        {
+          return BadRequest();
+        }
+
+        _context.Entry(comment).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+
+        return Ok(await _context.Comments.FindAsync(id));
       }
-
-      _context.Entry(comment).State = EntityState.Modified;
-      await _context.SaveChangesAsync();
-
-      return Ok(await _context.Comments.FindAsync(id));
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
 
     // DELETE api/comments/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteComment(int id)
     {
-      var comment = await _context.Comments.FindAsync(id);
-
-      if (comment == null)
+      try
       {
-        return NotFound();
+        var comment = await _context.Comments.FindAsync(id);
+
+        if (comment == null)
+        {
+          return NotFound();
+        }
+
+        _context.Comments.Remove(comment);
+        await _context.SaveChangesAsync();
+
+        return Ok(comment);
       }
-
-      _context.Comments.Remove(comment);
-      await _context.SaveChangesAsync();
-
-      return Ok(comment);
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
   }

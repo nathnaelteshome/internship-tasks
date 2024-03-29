@@ -2,82 +2,76 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Task9.Data;
 using Task9.Models;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
-namespace Task9.Controllers;
+using FluentValidation;
 
+namespace Task9.Controllers
+{
   [ApiController]
   [Route("api/[controller]")]
   public class CommentController : ControllerBase
   {
     private readonly BlogContext _context;
+    private readonly IValidator<Comment> _validator;
 
-    public CommentController(BlogContext context)
+    public CommentController(BlogContext context, IValidator<Comment> validator)
     {
       _context = context;
-    }
-
-    // GET: api/comments
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Comment>>> GetComments()
-    {
-      return await _context.Comments.ToListAsync();
-    }
-
-    // GET: api/comments/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Comment>> GetComment(int id)
-    {
-      var comment = await _context.Comments.FindAsync(id);
-
-      if (comment == null)
-      {
-        return NotFound();
-      }
-
-      return comment;
+      _validator = validator;
     }
 
     // POST api/comments
     [HttpPost]
     public async Task<ActionResult<Comment>> PostComment(Comment comment)
     {
-      _context.Comments.Add(comment);
-      await _context.SaveChangesAsync();
+      try
+      {
+        var validationResult = _validator.Validate(comment);
+        if (!validationResult.IsValid)
+        {
+          return BadRequest(validationResult.Errors);
+        }
 
-      return CreatedAtAction(nameof(GetComment), new { id = comment.CommentId }, comment);
+        _context.Comments.Add(comment);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(Comment), new { id = comment.CommentId }, comment);
+      }
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
 
     // PUT api/comments/5
     [HttpPut("{id}")]
     public async Task<IActionResult> PutComment(int id, Comment comment)
     {
-      if (id != comment.CommentId)
+      try
       {
-        return BadRequest();
+        if (id != comment.CommentId)
+        {
+          return BadRequest();
+        }
+
+        var validationResult = _validator.Validate(comment);
+        if (!validationResult.IsValid)
+        {
+          return BadRequest(validationResult.Errors);
+        }
+
+        _context.Entry(comment).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+
+        return Ok(await _context.Comments.FindAsync(id));
       }
-
-      _context.Entry(comment).State = EntityState.Modified;
-      await _context.SaveChangesAsync();
-
-      return Ok(await _context.Comments.FindAsync(id));
+      catch (Exception ex)
+      {
+        // Log the exception here
+        return StatusCode(500, "Internal server error");
+      }
     }
 
-    // DELETE api/comments/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteComment(int id)
-    {
-      var comment = await _context.Comments.FindAsync(id);
-
-      if (comment == null)
-      {
-        return NotFound();
-      }
-
-      _context.Comments.Remove(comment);
-      await _context.SaveChangesAsync();
-
-      return Ok(comment);
-    }
   }
+}

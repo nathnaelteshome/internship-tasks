@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vv0S36yZVopgKbBjkvkeA3wdxbaiP8aGGfouB35PD+y4+LwSN3ml051nrvyTCvBj3/UXN+LJ3PWVfB0wN+qKeQ==",
+  "dgSpecHash": "/FPHM2FMgaWEKVKaGTAakhTn20NBQ0mBmC+IeQ3PFscBTN3OSsrWi+1ubSi2YIr1Od/09t9+mXpHMtC9d53kVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\API.csproj",
+  "projectFilePath": "c:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\natyb\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\natyb\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.3\\microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
