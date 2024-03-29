@@ -1,6 +1,5 @@
 using Application.DTOs.BlogDto;
 using Application.DTOs.CommentDto;
-using Application.DTOs.LikeDto;
 using AutoMapper;
 using Domain;
 
@@ -16,7 +15,6 @@ public class MappingProfiles : Profile
         CreateMap<Comment, ListCommentDto>().ReverseMap();
         CreateMap<Comment, CreateCommentDto>().ReverseMap();
         CreateMap<Comment, UpdateCommentDto>().ReverseMap();
-        CreateMap<Like, LikeDto>().ReverseMap();
     }
 
 }
