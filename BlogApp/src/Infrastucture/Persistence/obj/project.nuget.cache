@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "olSID9aP2oYQGxRQy+oENkrye7Og40X2YmQle7PPDRK0052sLUAYi/ef4kkEeS+WyZPUS/g9zITtPMl6csFYpw==",
+  "dgSpecHash": "3F1NU8l6gwJ5jUS/HDEpODViYE31ZFkb5a2V3mKhcY3X+f1S3HdGoJAqBgzIIMjJqi8HxdKlrJbAceVXV5pFfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\BlogApp\\src\\Infrastucture\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\natyb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\natyb\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\natyb\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\natyb\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\natyb\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\natyb\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\natyb\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

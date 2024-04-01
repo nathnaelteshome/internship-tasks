@@ -10,12 +10,12 @@ using Task9.Data;
 
 namespace Persistence.Repositories;
 
-public class CommentRepository : GenericRepository<Comment>, ICommentRepository
+public class CommentRepository  : GenericRepository<Comment>, ICommentRepository
 {
     private readonly BlogContext _dbContext;
 
     public Comment
-Repository(BlogContext dbContext) : base(dbContext)
+    CommentRepository(BlogContext dbContext) : base(dbContext)
     {
         _dbContext = dbContext;
     }
