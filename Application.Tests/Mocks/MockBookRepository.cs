@@ -22,6 +22,8 @@ public static class MockBookRepository
                 Title = "Book 1",
                 Genre = "Genre 1",
                 Year = new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+                Language = "English"
+                Author = "Author 2"
             },
             new Book
             {
@@ -29,6 +31,8 @@ public static class MockBookRepository
                 Title = "Book 2",
                 Genre = "Genre 2",
                 Year = new DateTime(2021, 2, 15, 0, 0, 0, DateTimeKind.Utc)
+                Language = "English"
+                Author = "Author 2"
             },
             new Book
             {
@@ -36,6 +40,8 @@ public static class MockBookRepository
                 Title = "Book 3",
                 Genre = "Genre 3",
                 Year = new DateTime(2020, 5, 10, 0, 0, 0, DateTimeKind.Utc)
+                Language = "English"
+                Author = "Author 2"
             },
             new Book
             {
@@ -43,6 +49,8 @@ public static class MockBookRepository
                 Title = "Book 4",
                 Genre = "Genre 4",
                 Year = new DateTime(2019, 8, 20, 0, 0, 0, DateTimeKind.Utc)
+                Language = "English"
+                Author = "Author 2"
             }
         };
 
