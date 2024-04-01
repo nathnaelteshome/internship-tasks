@@ -1,6 +1,6 @@
-using Application.DTOs.CommentDto;
+using Application.DTOs.CommentDto.Validators;
+using Application.Exceptions;
 using Application.Features.Comments.Requests.Commands;
-using Application.Features.Comments.Requests.Queries;
 using Application.Persistance.Contracts;
 using AutoMapper;
 using Domain;
@@ -17,11 +17,17 @@ public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand,
         _commentRepository = commentRepository;
         _mapper = mapper;
 
-    }
+    }   
     public async Task<int> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
     {
+        var validator = new CreateCommentDtoValidator();
+        var validationResult = await validator.ValidateAsync(request.CommentDto);
+        if (!validationResult.IsValid)
+        {
+            throw new ValidationException(validationResult);
+        }
        var comment = _mapper.Map<Comment>(request.CommentDto);
-        comment = await _commentRepository.UpdateAsync(comment);
+        comment = await _commentRepository.AddAsync(comment);
         return comment.Id;
     }
 }

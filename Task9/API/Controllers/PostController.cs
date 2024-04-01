@@ -20,60 +20,22 @@ public class PostController : ControllerBase
     _validator = validator;
   }
 
-  // POST api/posts
-  [HttpPost]
-  public async Task<ActionResult<Post>> PostPost(Post post)
+  // Existing code...
+
+  // GET api/posts/comments/5
+  [HttpGet("comments/{id}")]
+  public async Task<ActionResult<Comment>> GetComment(int id)
   {
-    try
+    var comment = await _context.Comments.FindAsync(id);
+
+    if (comment == null)
     {
-      var validationResult = _validator.Validate(post);
-
-      if (!validationResult.IsValid)
-      {
-        return BadRequest(validationResult.Errors);
-      }
-
-      _context.Posts.Add(post);
-      await _context.SaveChangesAsync();
-
-      return CreatedAtAction(nameof(Post), new { id = post.PostId }, post);
+      return NotFound();
     }
-    catch (Exception ex)
-    {
-      // Log the exception here
-      return StatusCode(500, "Internal server error");
-    }
-  }
 
-  // PUT api/posts/5
-  [HttpPut("{id}")]
-  public async Task<IActionResult> PutPost(int id, Post post)
-  {
-    try
-    {
-      var validationResult = _validator.Validate(post);
-
-      if (!validationResult.IsValid)
-      {
-        return BadRequest(validationResult.Errors);
-      }
-
-      if (id != post.PostId)
-      {
-        return BadRequest();
-      }
-
-      _context.Entry(post).State = EntityState.Modified;
-      await _context.SaveChangesAsync();
-
-      return Ok(await _context.Posts.FindAsync(id));
-    }
-    catch (Exception ex)
-    {
-      // Log the exception here
-      return StatusCode(500, "Internal server error");
-    }
+    return comment;
   }
 
 
 }
+
