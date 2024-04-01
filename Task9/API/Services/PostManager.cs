@@ -1,4 +1,3 @@
-using Validator;
 using Task9.Data;
 using Task9.Models;
 
@@ -21,7 +20,7 @@ public class PostManager{
 
     //Update a post using the id but throws exception if it doesnt exist
     public Post UpdatePost(Post UpdatedPost){
-        Post old = GetPostById(UpdatedPost.PostId) ?? throw new CustomException("Post not found");
+        Post old = GetPostById(UpdatedPost.PostId) ?? throw new Exception("Post not found");
         old.Title = UpdatedPost.Title;
         old.Content = UpdatedPost.Content;
         _context.SaveChanges();
@@ -30,7 +29,7 @@ public class PostManager{
 
     //Delete a post with id or throw exception
     public void DeletePost(int id){
-        Post post = GetPostById(id) ?? throw new CustomException("Post not found");
+        Post post = GetPostById(id) ?? throw new Exception("Post not found");
         _context.Posts.Remove(post);
         _context.SaveChanges();
     }
@@ -42,7 +41,7 @@ public class PostManager{
 
     // get a post with id
     public Post GetPostById(int id){
-        Post post = _context.Posts.Find(id) ?? throw new CustomException("Post not found");
+        Post post = _context.Posts.Find(id) ?? throw new Exception("Post not found");
         return post; 
     }
 }

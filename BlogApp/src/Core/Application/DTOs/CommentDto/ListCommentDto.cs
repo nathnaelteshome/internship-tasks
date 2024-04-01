@@ -5,5 +5,5 @@ namespace Application.DTOs.CommentDto;
 public class ListCommentDto : BaseDto
 {
     public string? Content { get; set; }
-    public int PostId { get; set; }
+    public int BlogId { get; set; }
 }

@@ -1,4 +1,6 @@
+using System.ComponentModel.DataAnnotations;
 using Application.DTOs.CommentDto;
+using Application.Exceptions;
 using Application.Features.Comments.Requests.Commands;
 using Application.Features.Comments.Requests.Queries;
 using Application.Persistance.Contracts;
@@ -21,6 +23,11 @@ namespace Application.Features.Comments.Handlers.Commands
         public async Task<Unit> Handle(DeleteCommentCommand request, CancellationToken cancellationToken)
         {
             var comment = await _commentRepository.GetByIdAsync(request.Id);
+
+            if(comment == null)
+            {
+                throw new NotFoundException(nameof(Comment), request.Id);
+            }
             await _commentRepository.DeleteAsync(comment);
             return Unit.Value;
         }
