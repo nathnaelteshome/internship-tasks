@@ -138,3 +138,5 @@ C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\Task9\A
 C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\Task9\API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\Task9\API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\Task9\API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+c:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\Task9\API\bin\Debug\net8.0\FluentValidation.dll
+c:\Users\natyb\Documents\Workspace\Codding\dotnet\Tasks\internship-tasks\Task9\API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -6,4 +6,7 @@ public class Like : BaseDomainEntity
 {
     public string? UserId { get; set; }
     public int BlogId { get; set; }
+
+    public Blog? Blog { get; set; } 
+
 }
