@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\API.csproj": {}
+    "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\BlogApp\\src\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\API.csproj": {
+    "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\BlogApp\\src\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\BlogApp\\src\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\API.csproj",
+        "projectPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\BlogApp\\src\\API\\API.csproj",
         "packagesPath": "C:\\Users\\natyb\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\Task10\\API\\obj\\",
+        "outputPath": "C:\\Users\\natyb\\Documents\\Workspace\\Codding\\dotnet\\Tasks\\internship-tasks\\BlogApp\\src\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\natyb\\AppData\\Roaming\\NuGet\\NuGet.Config"
